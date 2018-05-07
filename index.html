@@ -1,0 +1,56 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guess Gems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+</head>
+
+<body>
+
+    <h1 id="title" >Gem Guess </h1>
+    <button id = "show">explanation</button>
+    
+    <div id ="explanation" style="display: none">
+       <ol>
+           <li>player will be shown a random number at the start of the game.</li>
+           <li>When the player clicks on a crystal, it will add a specific amount of points to the player's total score.</li>
+           <li>Your game will hide this amount until the player clicks a crystal.</li>
+           <li>When they do click one, update the player's score counter.</li>
+           <li>The player wins if their total score matches the random number from the beginning of the game.</li>
+           <li>The player loses if their score goes above the random number.</li>
+           <li>The game restarts whenever the player wins or loses.</li>
+           <li>When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.</li>
+           <li>The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.</li>
+       </ol>
+    </div>
+    <button id="start-game"> Start Game !</button>
+    <div id="data-div">
+    <h2 id = "number-title">Guess the number!</h2>
+    <p id = "number-guess"></p>
+    <p id = "wins"></p>
+    <p id = "losses"></p>
+    <p id = "target-number"></p>
+    <p id = "score-counter"></p>
+
+    </div>
+
+        <div id ="crystals">
+
+   
+        </div>
+
+
+    
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
