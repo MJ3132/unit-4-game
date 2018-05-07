@@ -20,7 +20,7 @@ var targetNumber = Math.floor(Math.random() * (120 - 9 + 1)) + 9;
 var scoreCounter = 0;
 var wins = 0;
 var losses = 0;
-var images = ["http://www.decocraftstore.com/ekmps/shops/d1a540/images/13mm-x-18mm-lilac-teardrop-shape-acrylic-embellishment-gems-2430-p.jpg",
+var images = ["http://www.decocraftstore.com/ekmps/shops/d1a540/images/13mm-x-18mm-lilac-teardrop-shape-acrylic-embellishment-gems-2430-p.jpg   ",
 "https://4.imimg.com/data4/EV/IX/MY-24672552/octagon-green-emerald-500x500.jpg",
 "https://cdn.shopify.com/s/files/1/0380/5717/products/ROUND_16f413a7-baf6-41e9-a37c-cbd20e91e816_1024x1024.png?v=1507947265",
 "http://www.decocraftstore.com/ekmps/shops/d1a540/images/13mm-x-18mm-hot-pink-teardrop-shape-acrylic-embellishment-gems-2420-p.jpg"];
@@ -44,6 +44,7 @@ $("#score-counter").text("Score Counter :" +  scoreCounter);
 $("#wins").text("Wins : " + wins);
 //losses
 $("#losses").text("Losses : " + losses);
+
 
 
 
@@ -92,6 +93,7 @@ $("#losses").text("Losses : " + losses);
     }
     resetGame();
 
+
     // event delegation , if you reset and create new elements, the listener wont follow since
     // it was attached to the previous, by adding document, the DOM will track any new elements being added
     // in order for the listener to still apply to the new created elements
@@ -133,9 +135,27 @@ $("#losses").text("Losses : " + losses);
                  
     
                 }
-              
+                $("#reset-game").on("click",function() {
+               
+                    resetGame();  
+                    scoreCounter = 0;
+                    losses = 0;
+                    wins = 0;
+                
+                    $("#losses").html("Losses : " + losses);
+                    $("#wins").html("Wins : " + wins);
+                    $("#score-counter").html("Score Counter :" +  scoreCounter);
+
+                  });
+                  
            
         });
         
-     
+
+     // reset/start
+
+
+
+
+
         
